@@ -5,12 +5,13 @@ import './index.css'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
 import Sobre from './pages/Sobre'
+import ErrorPage from './pages/ErrorPage'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: <App />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/sobre",
@@ -22,7 +23,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}/>
-     
-    
   </React.StrictMode>,
 )
